@@ -130,11 +130,8 @@ public class NodeEntity {
     @Column( name = "ENFORCEREFINTEG", nullable = false )
     private boolean referentialIntegrityEnforced = true;
 
-    // @org.hibernate.annotations.CollectionOfElements( fetch = FetchType.LAZY )
-    // @JoinTable( name = "ModeShape_LARGEVALUE_USAGES", joinColumns = {@JoinColumn( name = "WORKSPACE_ID" ),
-    // @JoinColumn( name = "NODE_UUID" )} )
     @ManyToMany
-    @JoinTable( name = "ModeShape_LARGEVALUE_USAGES", joinColumns = {@JoinColumn( name = "ID" )} )
+    @JoinTable( name = "MODE_LARGEVALUE_USAGES", joinColumns = {@JoinColumn( name = "ID" )} )
     private final Set<LargeValueEntity> largeValues = new HashSet<LargeValueEntity>();
 
     public NodeEntity() {

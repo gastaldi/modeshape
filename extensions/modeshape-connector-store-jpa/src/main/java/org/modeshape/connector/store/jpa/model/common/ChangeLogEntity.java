@@ -41,8 +41,8 @@ import org.modeshape.graph.property.basic.JodaDateTime;
  * a binary (and compressed) format.
  */
 @Entity
-@Table( name = "DNA_CHANGELOG" )
-@org.hibernate.annotations.Table( appliesTo = "DNA_CHANGELOG", indexes = @Index( name = "NS_CHANGE_TS_INX", columnNames = {"UTC_TIMESTAMP"} ) )
+@Table( name = "MODE_CHANGELOG" )
+@org.hibernate.annotations.Table( appliesTo = "MODE_CHANGELOG", indexes = @Index( name = "NS_CHANGE_TS_INX", columnNames = {"UTC_TIMESTAMP"} ) )
 @NamedQueries( {
     @NamedQuery( name = "ChangeLogEntity.findBetween", query = "select entry from ChangeLogEntity as entry where entry.timestampInUtc >= :start and entry.timestampInUtc <= :end" ),
     @NamedQuery( name = "ChangeLogEntity.deleteBefore", query = "delete ChangeLogEntity entry where entry.timestampInUtc < :timestamp" )} )

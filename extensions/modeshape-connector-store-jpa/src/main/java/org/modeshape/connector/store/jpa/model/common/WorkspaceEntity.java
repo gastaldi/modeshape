@@ -45,8 +45,8 @@ import org.modeshape.common.util.CheckArg;
  * one or more enities.
  */
 @Entity
-@Table( name = "DNA_WORKSPACES" )
-@org.hibernate.annotations.Table( appliesTo = "DNA_WORKSPACES", indexes = @Index( name = "WS_NAME_INX", columnNames = {"NAME"} ) )
+@Table( name = "MODE_WORKSPACES" )
+@org.hibernate.annotations.Table( appliesTo = "MODE_WORKSPACES", indexes = @Index( name = "WS_NAME_INX", columnNames = {"NAME"} ) )
 @NamedQueries( {@NamedQuery( name = "WorkspaceEntity.findAll", query = "select ws from WorkspaceEntity as ws" ),
     @NamedQuery( name = "WorkspaceEntity.findByName", query = "select ws from WorkspaceEntity as ws where ws.name = :name" ),
     @NamedQuery( name = "WorkspaceEntity.findAllNames", query = "select ws.name from WorkspaceEntity as ws" )} )

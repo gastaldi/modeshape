@@ -42,8 +42,8 @@ import org.modeshape.common.util.CheckArg;
  * one or more enities.
  */
 @Entity
-@Table( name = "DNA_NAMESPACES" )
-@org.hibernate.annotations.Table( appliesTo = "DNA_NAMESPACES", indexes = @Index( name = "NS_URI_INX", columnNames = {"URI"} ) )
+@Table( name = "MODE_NAMESPACES" )
+@org.hibernate.annotations.Table( appliesTo = "MODE_NAMESPACES", indexes = @Index( name = "NS_URI_INX", columnNames = {"URI"} ) )
 @NamedQueries( {@NamedQuery( name = "NamespaceEntity.findAll", query = "select ns from NamespaceEntity as ns" ),
     @NamedQuery( name = "NamespaceEntity.findByUri", query = "select ns from NamespaceEntity as ns where ns.uri = ?1" )} )
 public class NamespaceEntity {

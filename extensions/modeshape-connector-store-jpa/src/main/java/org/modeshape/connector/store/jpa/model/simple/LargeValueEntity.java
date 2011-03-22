@@ -70,7 +70,7 @@ public class LargeValueEntity {
      * </p>
      */
     private static final String MYSQL_DELETE_ALL_UNUSED_LARGE_VALUE_ENTITIES = "DELETE lv FROM MODE_SIMPLE_LARGE_VALUES AS lv "
-                                                                               + "LEFT OUTER JOIN ModeShape_LARGEVALUE_USAGES AS lvu "
+                                                                               + "LEFT OUTER JOIN MODE_LARGEVALUE_USAGES AS lvu "
                                                                                + "ON lv.SHA1 = lvu.largeValues_SHA1 WHERE lvu.ID IS NULL";
 
     @Id
